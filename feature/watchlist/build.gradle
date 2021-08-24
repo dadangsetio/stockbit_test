@@ -1,0 +1,11 @@
+
+apply from: '../../android_feature_dependencies.gradle'
+
+
+dependencies {
+    implementation project(Modules.navigation)
+    implementation project(Modules.common)
+
+    implementation AndroidLibraries.material
+    implementation AndroidLibraries.swipeRefreshLayout
+}

@@ -9,7 +9,6 @@ android {
     dataBinding {
         enabled true
     }
-    dynamicFeatures = [':feature:watchlist']
 }
 
 dependencies {
@@ -32,4 +31,5 @@ dependencies {
 
     // FEATURE
     implementation project(Modules.loginFeature)
+    implementation project(Modules.watchlistFeature)
 }

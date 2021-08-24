@@ -11,6 +11,7 @@ object Modules {
     val commonTest = ":common_test"
 
     val loginFeature = ":feature:login"
+    val watchlistFeature = ":feature:watchlist"
 
     val local = ":data:local"
     val remote = ":data:remote"
@@ -55,6 +56,7 @@ object Versions {
     val fragmentTest = "1.1.0-alpha06"
     val databinding = "3.3.2"
     val material ="1.4.0"
+    val swipeRefreshLayout = "1.1.0"
 }
 
 object Libraries {
@@ -95,6 +97,7 @@ object AndroidLibraries {
     val navigation = "androidx.navigation:navigation-ui-ktx:${Versions.nav}"
     val navigationFrag = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"
     val material = "com.google.android.material:material:${Versions.material}"
+    val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
 }
 
 object TestLibraries {
