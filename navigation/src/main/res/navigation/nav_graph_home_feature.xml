@@ -5,9 +5,14 @@
     android:id="@+id/nav_graph_home_feature"
     app:startDestination="@id/loginFragment">
 
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.stockbit.navigation.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+    <fragment android:id="@+id/loginFragment"
+        android:name="com.stockbit.login.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_loginFragment_to_watchlistFragment"
+            app:destination="@id/watchlistFragment" />
+    </fragment>
+    <fragment android:id="@+id/watchlistFragment"
+        android:name="com.stockbit.watchlist.WatchListFragment"
+        android:label="Stockbit"/>
 </navigation>

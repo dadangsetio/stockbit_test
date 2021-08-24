@@ -9,6 +9,7 @@ android {
     dataBinding {
         enabled true
     }
+    dynamicFeatures = [':feature:watchlist']
 }
 
 dependencies {
@@ -28,5 +29,7 @@ dependencies {
     implementation AndroidLibraries.appCompat
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
-    implementation AndroidLibraries.material
+
+    // FEATURE
+    implementation project(Modules.loginFeature)
 }

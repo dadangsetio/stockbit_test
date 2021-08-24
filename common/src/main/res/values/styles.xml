@@ -11,4 +11,5 @@
     <style name="ToolbarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:backgroundTint">@color/colorWhite</item>
     </style>
+
 </resources>

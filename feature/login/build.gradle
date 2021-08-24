@@ -1,0 +1,9 @@
+
+apply from: '../../android_feature_dependencies.gradle'
+
+
+dependencies {
+    implementation project(Modules.navigation)
+    implementation AndroidLibraries.material
+    implementation project(Modules.common)
+}

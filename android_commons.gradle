@@ -1,4 +1,5 @@
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion Versions.compileSdk
@@ -17,8 +18,12 @@ android {
             minifyEnabled true
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation KotlinLibraries.kotlin
+    kapt KotlinLibraries.databinding
 }

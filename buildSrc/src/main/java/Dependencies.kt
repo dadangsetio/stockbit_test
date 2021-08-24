@@ -10,6 +10,8 @@ object Modules {
     val common = ":common"
     val commonTest = ":common_test"
 
+    val loginFeature = ":feature:login"
+
     val local = ":data:local"
     val remote = ":data:remote"
     val model = ":data:model"
@@ -75,6 +77,9 @@ object Libraries {
 object KotlinLibraries {
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val kotlinCoroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+
+    // Binding
+    val databinding = "androidx.databinding:databinding-compiler:${Versions.gradle}"
 }
 
 object AndroidLibraries {

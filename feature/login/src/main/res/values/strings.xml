@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_login_with_facebook">Login with facebook</string>
+    <string name="hint_username_or_email">Username or Email</string>
+    <string name="hint_password">Password</string>
+    <string name="label_login">Login</string>
+    <string name="label_forgot_password">Forgot Password</string>
+    <string name="label_login_with_fingerprint">Login with Fingerprint</string>
+    <string name="label_not_have_account">Not have an account?</string>
+    <string name="label_register_now">Register Now</string>
+    <string name="label_or">Or</string>
+    <string name="alert_wrong_username_and_password">Sorry username and password has wrong, please try aganin</string>
+</resources>
