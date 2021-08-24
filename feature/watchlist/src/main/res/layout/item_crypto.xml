@@ -1,38 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/marginNormal"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/tv_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="AALI"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-        android:textStyle="bold"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Astra Argo Lestari Tbk."
-        android:id="@+id/tv_name"
-        android:layout_below="@id/tv_code"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="9,050"
-        android:id="@+id/tv_price"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-        android:textStyle="bold"
-        android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="+200(2,26%)"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@id/tv_price"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+    <data>
+        <variable
+            name="coin"
+            type="Data" />
+    </data>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/marginNormal">
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="AALI"
+            android:text="@{coin.coinInfo.name}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Astra Argo Lestari Tbk."
+            android:id="@+id/tv_name"
+            android:text="@{coin.coinInfo.fullName}"
+            android:layout_below="@id/tv_code"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9,050"
+            android:text="@{coin.dISPLAY.uSD.pRICE}"
+            android:id="@+id/tv_price"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="+200(2,26%)"
+            android:text="@{coin.dISPLAY.uSD.cHANGE24HOUR}"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tv_price"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+    </RelativeLayout>
+</layout>

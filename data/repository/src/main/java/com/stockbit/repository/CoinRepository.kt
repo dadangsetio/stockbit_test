@@ -18,11 +18,14 @@ class CoinRepositoryImpl(
 ): CoinRepository{
     override suspend fun getCoin(limit: Int, tsym: String): Flow<Resource<List<Data>>> {
         return flow {
-            val list = dataSource.fetchTopVolCoinAsync(limit, tsym)
-                if (list.isSuccessful){
-                    emit(Resource.success(list.body()?.data))
+            val result = dataSource.fetchTopVolCoinAsync(limit, tsym)
+                if (result.isSuccessful){
+                    result.body()?.let {
+                        emit(Resource.success(it.data))
+                    }
+
                 }else{
-                    emit(Resource.error(Throwable(list.message()), null))
+                    emit(Resource.error(Throwable(result.message()), null))
                 }
         }.flowOn(Dispatchers.IO)
     }
