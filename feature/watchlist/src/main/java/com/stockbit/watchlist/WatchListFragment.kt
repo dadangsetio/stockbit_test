@@ -6,15 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import com.stockbit.common.base.BaseFragment
 import com.stockbit.watchlist.databinding.FragmentWatchListBinding
 
-class WatchListFragment : BaseFragment() {
+class WatchListFragment : Fragment() {
 
     private lateinit var binding: FragmentWatchListBinding
-    private lateinit var viewModel: WatchListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
